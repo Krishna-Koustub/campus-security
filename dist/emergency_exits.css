@@ -1,0 +1,52 @@
+/* Reset some default styles */
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styles for the header */
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Style for the main content section */
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for each department */
+.department {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Style for department headings */
+.department h3 {
+  margin-bottom: 10px;
+}
+
+/* Style for video guide links */
+.department a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Hover effect for video guide links */
+.department a:hover {
+  text-decoration: underline;
+}
+
+/* Style for footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 0;
+}
