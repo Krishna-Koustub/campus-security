@@ -14,7 +14,7 @@
 
   <main class="complaint-form-container">
     <h2>Register Complaint</h2>
-    <form id="complaintForm" class="complaint-form">
+    <form id="complaintForm" class="complaint-form" action="submit_complaint.php" method="post">
       <div class="form-group">
         <label for="complaintTitle">Complaint Title:</label>
         <input type="text" id="complaintTitle" name="complaintTitle" required>
@@ -23,7 +23,29 @@
         <label for="complaintMessage">Complaint Message:</label>
         <textarea id="complaintMessage" name="complaintMessage" rows="4" required></textarea>
       </div>
-      <button type="submit">Submit Complaint</button>
+      <div class="form-group">
+        <label for="complaintCategory">Complaint Category:</label>
+        <select id="complaintCategory" name="complaintCategory" required>
+          <option value="">Select Category</option>
+          <option value="Security Issue">Security Issue</option>
+          <option value="Safety Concern">Safety Concern</option>
+          <option value="Facility Problem">Facility Problem</option>
+          <option value="Behavioral Incident">Behavioral Incident</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fullName">Your Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+      </div>
+      <button type="button" onclick="submitComplaint()">Submit Complaint</button>
     </form>
     <a href="index.html" class="back-button">Back to Home</a>
   </main>
@@ -31,5 +53,29 @@
   <footer class="main-footer">
     <p>&copy; 2024 Campus Security Surveillance System. All rights reserved.</p>
   </footer>
+
+  <script>
+    function submitComplaint() {
+      const form = document.getElementById('complaintForm');
+      const formData = new FormData(form);
+
+      fetch('submit_complaint.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Complaint submitted successfully!');
+          form.reset();
+        } else {
+          throw new Error('Failed to submit complaint');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit complaint. Please try again.');
+      });
+    }
+  </script>
 </body>
 </html>
