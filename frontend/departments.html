@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departments</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.2s;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      color: #343a40;
+    }
+
+    .card-text {
+      color: #6c757d;
+    }
+
+    .department-card {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container-fluid text-center">
+    <h1>Campus Departments</h1>
+  </header>
+
+  <section class="container">
+    <h2 class="text-center mb-4">List of Departments</h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Computer Science Department</h3>
+            <p class="card-text">The Computer Science Department offers courses and research opportunities in computer programming, algorithms, software development, artificial intelligence, and data science.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-ComputerScience" data-department="Computer Science Department">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Training and Placement Department</h3>
+            <p class="card-text">The Training and Placement Department provides students with training for the corporate world, offering opportunities for internships, job placements, and facilitating personality development programs.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-TrainingPlacement" data-department="Training and Placement Department">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Information Science Department</h3>
+            <p class="card-text">The Information Science Department focuses on data analysis, information retrieval, database systems, cybersecurity, and machine learning.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-InformationScience" data-department="Information Science Department">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Civil Engineering Department</h3>
+            <p class="card-text">The Civil Engineering Department offers programs in structural engineering, transportation engineering, environmental engineering, and urban planning.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-CivilEngineering" data-department="Civil Engineering Department">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Mechanical Engineering Department</h3>
+            <p class="card-text">The Mechanical Engineering Department specializes in mechanical design, thermal systems, manufacturing processes, robotics, and automotive engineering.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-MechanicalEngineering" data-department="Mechanical Engineering Department">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Artificial Intelligence Department</h3>
+            <p class="card-text">The Artificial Intelligence Department conducts research in machine learning, natural language processing, computer vision, and AI applications in various domains.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-ArtificialIntelligence" data-department="Artificial Intelligence Department">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Electronics Department</h3>
+            <p class="card-text">The Electronics Department focuses on electronic circuits, communication systems, embedded systems, VLSI design, and semiconductor devices.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-Electronics" data-department="Electronics Department">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Chemistry Department</h3>
+            <p class="card-text">The Chemistry Department offers programs covering organic chemistry, inorganic chemistry, physical chemistry, analytical chemistry, and materials chemistry.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-Chemistry" data-department="Chemistry Department">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Physics Department</h3>
+            <p class="card-text">The Physics Department focuses on classical mechanics, electromagnetism, quantum mechanics, thermodynamics, and theoretical physics.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-Physics" data-department="Physics Department">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Mathematics Department</h3>
+            <p class="card-text">The Mathematics Department covers topics such as algebra, calculus, geometry, number theory, mathematical analysis, and applied mathematics.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-Mathematics" data-department="Mathematics Department">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">National Cadet Corps (NCC) Office</h3>
+            <p class="card-text">The NCC Office facilitates programs related to the National Cadet Corps, including training, leadership development, and community service activities.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-NCC" data-department="National Cadet Corps (NCC) Office">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4 department-card">
+          <div class="card-body">
+            <h3 class="card-title">Physical Education Department</h3>
+            <p class="card-text">The Physical Education Department offers courses and activities aimed at promoting physical fitness, sportsmanship, and overall well-being.</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contactModal-PhysicalEducation" data-department="Physical Education Department">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="contactModal-ComputerScience" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-ComputerScience" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel-ComputerScience">Contact Details - Computer Science Department</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Contact Person:Dr Prabhanjan Sourkar</p>
+            <p>Email: hod.cse@jyothyit.ac.in</p>
+            <p>Phone: +1234567890</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="modal fade" id="contactModal-TrainingPlacement" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-TrainingPlacement" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel-TrainingPlacement">Contact Details - Training and Placement Department</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Contact Person: Mr.Akhilesh Satyanarayana</p>
+            <p>Email: placemdng@jyothyit.ac.in</p>
+            <p>Phone: +9876543210</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Information Science Department Modal -->
+<div class="modal fade" id="contactModal-InformationScience" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-InformationScience" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-InformationScience">Contact Details - Information Science Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Mr.Kishore </p>
+        <p>Email: hod.ise@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Civil Engineering Department Modal -->
+<div class="modal fade" id="contactModal-CivilEngineering" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-CivilEngineering" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-CivilEngineering">Contact Details - Civil Engineering Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr. Keshanva </p>
+        <p>Email: hod.civ@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mechanical Engineering Department Modal -->
+<div class="modal fade" id="contactModal-MechanicalEngineering" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-MechanicalEngineering" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-MechanicalEngineering">Contact Details - Mechanical Engineering Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: </p>
+        <p>Email: hod.me@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Artificial Intelligence Department Modal -->
+<div class="modal fade" id="contactModal-ArtificialIntelligence" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-ArtificialIntelligence" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-ArtificialIntelligence">Contact Details - Artificial Intelligence Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr. Madhu</p>
+        <p>Email: hod.aiml@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Electronics Department Modal -->
+<div class="modal fade" id="contactModal-Electronics" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-Electronics" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-Electronics">Contact Details - Electronics Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr.Chandrashekar</p>
+        <p>Email: hod.ece@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chemistry Department Modal -->
+<div class="modal fade" id="contactModal-Chemistry" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-Chemistry" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-Chemistry">Contact Details - Chemistry Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr. </p>
+        <p>Email: hod.che@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Physics Department Modal -->
+<div class="modal fade" id="contactModal-Physics" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-Physics" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-Physics">Contact Details - Physics Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr. </p>
+        <p>Email: hod.phy@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mathematics Department Modal -->
+<div class="modal fade" id="contactModal-Mathematics" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-Mathematics" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-Mathematics">Contact Details - Mathematics Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr.Madhusudhan</p>
+        <p>Email: hod.mat@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- National Cadet Corps (NCC) Office Modal -->
+<div class="modal fade" id="contactModal-NCC" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-NCC" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-NCC">Contact Details - National Cadet Corps (NCC) Office</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person: Dr.Manoj Kumar M</p>
+        <p>Email: ncc@jyothyit.ac.in</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Physical Education Department Modal -->
+<div class="modal fade" id="contactModal-PhysicalEducation" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel-PhysicalEducation" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel-PhysicalEducation">Contact Details - Physical Education Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Contact Person:Mr. Madhu </p>
+        <p>Email:</p>
+        <p>Phone: +1234567890</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <a href="index.html" class="btn btn-primary">Back</a>
+  </section>
+
+  <footer class="container-fluid text-center">
+    <p>&copy; 2024 Campus Security Surveillance System. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript to handle modal content -->
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="modal"]').click(function() {
+        var departmentName = $(this).data('department');
+        var modalId = $(this).data('target'); // Changed from data('modal') to data('target')
+        $('#' + modalId + ' .modal-title').text('Contact Details - ' + departmentName);
+      });
+    });
+  </script>
+</body>
+
+</html>
