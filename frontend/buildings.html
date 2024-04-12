@@ -1,317 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus Buildings</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Custom CSS */
-    .card-img-top-container {
-      width: 100%;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      overflow: hidden;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Buildings</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS */
+      .card-img-top-container {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+      }
 
-    .card-img-top {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
+      .card-img-top {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
 
-    .card-img-top:hover {
-      transform: scale(1.05);
-      cursor: pointer;
-    }
+      .card-img-top:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
 
-    .card {
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      height: 100%; /* Added fixed height */
-    }
+      .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 100%; /* Added fixed height */
+      }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+      .card:hover {
+        transform: translateY(-5px);
+      }
 
-    .card-body {
-      padding: 1.5rem;
-    }
-  </style>
-</head>
-<body>
-  <header class="container py-4">
-    <h1 class="text-center">Campus Buildings</h1>
-  </header>
+      .card-body {
+        padding: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container py-4">
+      <h1 class="text-center">Campus Buildings</h1>
+    </header>
 
-  <section class="container">
-    <div class="row">
-      <!-- Main Entrance -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="main_entrance.jpeg" class="card-img-top" alt="Main Entrance" onclick="openPopup('main_entrance.jpeg')">
+    <section class="container">
+      <div class="row">
+        <!-- Main Entrance -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="main_entrance.jpeg"
+                class="card-img-top"
+                alt="Main Entrance"
+                onclick="openPopup('main_entrance.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Main Entrance</h3>
+              <p class="card-text">JIT Main Entrance</p>
+              <li class="card-text">Opposite to the Main Parking</li>
+            </div>
           </div>
-          <div class="card-body">
-            <h3 class="card-title">Main Entrance</h3>
-            <p class="card-text">JIT Main Entrance</p>
+        </div>
+        <!-- Add more card elements similarly for other departments -->
+
+        <!-- Block B -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="block_b.jpeg"
+                class="card-img-top"
+                alt="Block B"
+                onclick="openPopup('block_b.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Block B</h3>
+              <p class="card-text">Entrance to Block B</p>
+              <li class="card-text">Straight From Main Entrance</li>
+              <li class="card-text">First Right</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block A -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="block_a.jpeg"
+                class="card-img-top"
+                alt="Block A"
+                onclick="openPopup('block_a.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Block A</h3>
+              <p class="card-text">Entrance to Block A</p>
+              <li class="card-text">Straight From Main Entrance</li>
+              <li class="card-text">Dead End</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Principal -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="principal_image.jpeg"
+                class="card-img-top"
+                alt="Principal"
+                onclick="openPopup('principal_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Principal</h3>
+              <p class="card-text">Department of Administration</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">Take Left Near the Notice Board</li>
+              <li class="card-text">Immediate Right</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admission -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="admission.jpeg"
+                class="card-img-top"
+                alt="Admission"
+                onclick="openPopup('admission.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Admission</h3>
+              <p class="card-text">Department of Admission</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">Take Left Near the Notice Board</li>
+              <li class="card-text">Immediate Left</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- AIC -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="aic-image.jpeg"
+                class="card-img-top"
+                alt="AIC"
+                onclick="openPopup('aic-image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">AIC</h3>
+              <p class="card-text">Department of Innovation</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">4th Floor</li>
+              <li class="card-text">Immediate Left After the Stairs</li>
+              <li class="card-text">Left Again</li>
+              <li class="card-text">Right Next To the Wall Painting</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Computer Science -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="computer_science_image.jpeg"
+                class="card-img-top"
+                alt="Computer Science"
+                onclick="openPopup('computer_science_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Computer Science</h3>
+              <p class="card-text">Department of Computer Science</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">3rd Floor</li>
+              <li class="card-text">Immediate Right After the Stairs/Lift</li>
+              <li class="card-text">Dead End</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Training and Placement -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="training_placement_image.jpeg"
+                class="card-img-top"
+                alt="Training and Placement"
+                onclick="openPopup('training_placement_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Training and Placement</h3>
+              <p class="card-text">Department of Career Services</p>
+              <li class="card-text">Enter Block B</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Right After the Stairs</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Information Science Engineering -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="information_science_image.jpeg"
+                class="card-img-top"
+                alt="Information Science Engineering"
+                onclick="openPopup('information_science_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Information Science Engineering</h3>
+              <p class="card-text">Department of Information Science</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Right After the Stairs/Lift</li>
+              <li class="card-text">Dead End</li>
+              <li class="card-text">Right Next to Tequed Labs</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- AIML -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="aiml_image.jpeg"
+                class="card-img-top"
+                alt="AIML"
+                onclick="openPopup('aiml_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">AIML</h3>
+              <p class="card-text">
+                Department of Artificial Intelligence and Machine Learning
+              </p>
+              <li class="card-text">Enter Block B From 2nd Entrance</li>
+              <li class="card-text">1st Floor</li>
+              <li class="card-text">Immediate Left After the Stairs</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Electronics -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="electronics_image.jpeg"
+                class="card-img-top"
+                alt="Electronics"
+                onclick="openPopup('electronics_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Electronics</h3>
+              <p class="card-text">Department of Electronics</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">1st Floor</li>
+              <li class="card-text">Immediate Right After the Stairs/Lift</li>
+              <li class="card-text">Dead End</li>
+              <li class="card-text">Right Next to Server Room</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Civil -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="civil_image.jpeg"
+                class="card-img-top"
+                alt="Civil"
+                onclick="openPopup('civil_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Civil</h3>
+              <p class="card-text">Department of Civil Engineering</p>
+              <li class="card-text">Enter Block B</li>
+              <li class="card-text">1st Floor</li>
+              <li class="card-text">Immediate Left After the Stairs</li>
+              <li class="card-text">Dead End</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mechanical -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="mechanical_image.jpeg"
+                class="card-img-top"
+                alt="Mechanical"
+                onclick="openPopup('mechanical_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mechanical</h3>
+              <p class="card-text">Department of Mechanical Engineering</p>
+              <li class="card-text">Enter Block B From DIfferent Entrace</li>
+              <li class="card-text">1st Floor</li>
+              <li class="card-text">Immediate Right After the Stairs</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Physics -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="physics_image.jpeg"
+                class="card-img-top"
+                alt="Physics"
+                onclick="openPopup('physics_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Physics</h3>
+              <p class="card-text">Department of Physics</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Left After the Stairs/Lift</li>
+              <li class="card-text">Dead End</li>
+              <li class="card-text">Take Right</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chemistry -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="chemistry_image.jpeg"
+                class="card-img-top"
+                alt="Chemistry"
+                onclick="openPopup('chemistry_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Chemistry</h3>
+              <p class="card-text">Department of Chemistry</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">1st Floor</li>
+              <li class="card-text">Immediate Left After the Stairs/Lift</li>
+              <li class="card-text">Dead End</li>
+              <li class="card-text">Take Right</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mathematics -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="mathematics_image.jpeg"
+                class="card-img-top"
+                alt="Mathematics"
+                onclick="openPopup('mathematics_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mathematics</h3>
+              <p class="card-text">Department of Mathematics</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Left After the Stairs/Lift</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- NCC -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="ncc_image.jpeg"
+                class="card-img-top"
+                alt="NCC"
+                onclick="openPopup('ncc_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">NCC</h3>
+              <p class="card-text">Department of NCC</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Left After the Stairs/Lift</li>
+
+              <li class="card-text">Opposite To the Table Tennis Area</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Library -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="library_image.jpeg"
+                class="card-img-top"
+                alt="Library"
+                onclick="openPopup('library_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Library</h3>
+              <p class="card-text">Department of Library Services</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Left After the Stairs/Lift</li>
+
+              <li class="card-text">Opposite to the Stairs</li>
+            </div>
+          </div>
+        </div>
+
+        <!-- Physical Education -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-img-top-container">
+              <img
+                src="physical_education_image.jpeg"
+                class="card-img-top"
+                alt="Physical Education"
+                onclick="openPopup('physical_education_image.jpeg')"
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Physical Education</h3>
+              <p class="card-text">Department of Physical Education</p>
+              <li class="card-text">Enter Block A</li>
+              <li class="card-text">2nd Floor</li>
+              <li class="card-text">Immediate Right After the Stairs/Lift</li>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Add more card elements similarly for other departments -->
+      <a href="index.html" class="btn btn-secondary btn-block mt-3">Back</a>
+    </section>
 
-      <!-- Block B -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="block_b.jpeg" class="card-img-top" alt="Block B" onclick="openPopup('block_b.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Block B</h3>
-            <p class="card-text">Entrance to Block B</p>
-          </div>
-        </div>
-      </div>
+    <footer class="container mt-5 py-4">
+      <p class="text-center">
+        &copy; 2024 Campus Security Surveillance System. All rights reserved.
+      </p>
+    </footer>
 
-      <!-- Block A -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="block_a.jpeg" class="card-img-top" alt="Block A" onclick="openPopup('block_a.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Block A</h3>
-            <p class="card-text">Entrance to Block A</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Principal -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="principal_image.jpeg" class="card-img-top" alt="Principal" onclick="openPopup('principal_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Principal</h3>
-            <p class="card-text">Department of Administration</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Admission -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="admission.jpeg" class="card-img-top" alt="Admission" onclick="openPopup('admission.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Admission</h3>
-            <p class="card-text">Department of Admission</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- AIC -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="aic-image.jpeg" class="card-img-top" alt="AIC" onclick="openPopup('aic-image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">AIC</h3>
-            <p class="card-text">Department of Innovation</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Computer Science -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="computer_science_image.jpeg" class="card-img-top" alt="Computer Science" onclick="openPopup('computer_science_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Computer Science</h3>
-            <p class="card-text">Department of Computer Science</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Training and Placement -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="training_placement_image.jpeg" class="card-img-top" alt="Training and Placement" onclick="openPopup('training_placement_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Training and Placement</h3>
-            <p class="card-text">Department of Career Services</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Information Science Engineering -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="information_science_image.jpeg" class="card-img-top" alt="Information Science Engineering" onclick="openPopup('information_science_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Information Science Engineering</h3>
-            <p class="card-text">Department of Information Science</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- AIML -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="aiml_image.jpeg" class="card-img-top" alt="AIML" onclick="openPopup('aiml_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">AIML</h3>
-            <p class="card-text">Department of Artificial Intelligence and Machine Learning</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Electronics -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="electronics_image.jpeg" class="card-img-top" alt="Electronics" onclick="openPopup('electronics_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Electronics</h3>
-            <p class="card-text">Department of Electronics</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Civil -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="civil_image.jpeg" class="card-img-top" alt="Civil" onclick="openPopup('civil_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Civil</h3>
-            <p class="card-text">Department of Civil Engineering</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mechanical -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="mechanical_image.jpeg" class="card-img-top" alt="Mechanical" onclick="openPopup('mechanical_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Mechanical</h3>
-            <p class="card-text">Department of Mechanical Engineering</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Physics -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="physics_image.jpeg" class="card-img-top" alt="Physics" onclick="openPopup('physics_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Physics</h3>
-            <p class="card-text">Department of Physics</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chemistry -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="chemistry_image.jpeg" class="card-img-top" alt="Chemistry" onclick="openPopup('chemistry_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Chemistry</h3>
-            <p class="card-text">Department of Chemistry</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mathematics -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="mathematics_image.jpeg" class="card-img-top" alt="Mathematics" onclick="openPopup('mathematics_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Mathematics</h3>
-            <p class="card-text">Department of Mathematics</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- NCC -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="ncc_image.jpeg" class="card-img-top" alt="NCC" onclick="openPopup('ncc_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">NCC</h3>
-            <p class="card-text">Department of NCC</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Library -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="library_image.jpeg" class="card-img-top" alt="Library" onclick="openPopup('library_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Library</h3>
-            <p class="card-text">Department of Library Services</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Physical Education -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <div class="card-img-top-container">
-            <img src="physical_education_image.jpeg" class="card-img-top" alt="Physical Education" onclick="openPopup('physical_education_image.jpeg')">
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Physical Education</h3>
-            <p class="card-text">Department of Physical Education</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="index.html" class="btn btn-secondary btn-block mt-3">Back</a>
-  </section>
-
-  <footer class="container mt-5 py-4">
-    <p class="text-center">&copy; 2024 Campus Security Surveillance System. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script>
-    function openPopup(imageSrc) {
-      window.open(imageSrc, '_blank', 'width=800,height=600');
-    }
-  </script>
-</body>
+    <!-- JavaScript -->
+    <script>
+      function openPopup(imageSrc) {
+        window.open(imageSrc, "_blank", "width=800,height=600");
+      }
+    </script>
+  </body>
 </html>
