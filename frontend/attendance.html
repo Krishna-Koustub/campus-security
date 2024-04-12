@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="attendance.css"> <!-- Replace "attendance.css" with the name of your CSS file -->
   <!-- Flatpickr CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script>flatpickr('#dateTime', {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+  });</script>
 </head>
 <body>
   <header class="container">
@@ -17,7 +21,7 @@
 
   <section class="container mt-5">
     <h2 class="text-center mb-4">Student Attendance Form</h2>
-    <form id="attendanceForm">
+    <form id="attendanceForm" onsubmit="submitAttendance(); return false;">
       <div class="form-group">
         <label for="usn">USN Number:</label>
         <input type="text" class="form-control" id="usn" name="usn" required>
@@ -68,7 +72,7 @@
     <p class="text-center">&copy; 2024 Campus Security Surveillance System. All rights reserved.</p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></scrip>
   <!-- Flatpickr JS -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script>
@@ -76,7 +80,47 @@
       enableTime: true,
       dateFormat: "Y-m-d H:i",
     });
+
+    function submitAttendance() {
+      const form = document.getElementById('attendanceForm');
+      const formData = new FormData(form);
+  
+      // Construct data object
+      const data = {
+        "usn": formData.get("usn"),
+        "name": formData.get("name"),
+        "branch": formData.get("branch"),
+        "semester": parseInt(formData.get("semester"))
+      };
+  
+      // Convert data to JSON
+      const jsonData = JSON.stringify(data);
+  
+      // Send JSON data to the server
+      fetch('http://localhost:8000/students/attendance', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: jsonData
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('Attendance submitted successfully!');
+          form.reset();
+        } else {
+          throw new Error('Failed to submit attendance');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit attendance. Please try again later.');
+      });
+    }
+    
+
   </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

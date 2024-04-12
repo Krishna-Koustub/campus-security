@@ -66,10 +66,27 @@
     function submitComplaint() {
       const form = document.getElementById('complaintForm');
       const formData = new FormData(form);
-
-      fetch('submit_complaint.php', {
+  
+      // Construct data object
+      const data = {
+        "title": formData.get("complaintTitle"),
+        "message": formData.get("complaintMessage"),
+        "category": formData.get("complaintCategory"),
+        "full_name": formData.get("fullName"),
+        "email_address": formData.get("email"),
+        "phone_number": formData.get("phoneNumber")
+      };
+  
+      // Convert data to JSON
+      const jsonData = JSON.stringify(data);
+  
+      // Send JSON data to the server
+      fetch('http://localhost:8000/complaints', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: jsonData
       })
       .then(response => {
         if (response.ok) {
@@ -85,6 +102,7 @@
       });
     }
   </script>
+  
 </body>
 
 </html>
